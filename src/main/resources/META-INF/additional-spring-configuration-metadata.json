@@ -1,0 +1,52 @@
+{
+  "properties": [
+    {
+      "name": "redis.model",
+      "type": "java.lang.String",
+      "description": "redis连接模式, 单机模式:single, 连接池:pool, 集群:cluster",
+      "defaultValue": "single"
+    },
+    {
+      "name": "redis.host-and-port",
+      "type": "java.lang.String",
+      "description": "主机和端口,格式 host:port",
+      "defaultValue": "localhost:6379"
+    },
+    {
+      "name": "redis.pass",
+      "type": "java.lang.String",
+      "description": "redis连接密码",
+      "defaultValue": "foobared"
+    },
+    {
+      "name": "redis.max-idle",
+      "type": "java.lang.String",
+      "description": "连接池中最大空闲数",
+      "defaultValue": "8"
+    },
+    {
+      "name": "redis.max-total",
+      "type": "java.lang.String",
+      "description": "连接池中总连接数.",
+      "defaultValue": "8"
+    },
+    {
+      "name": "redis.max-wait-millis",
+      "type": "java.lang.String",
+      "description": "最大等待毫秒数",
+      "defaultValue": "2000"
+    },
+    {
+      "name": "redis.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否启用redis",
+      "defaultValue": true
+    },
+    {
+      "name": "redis.max-redirections",
+      "type": "java.lang.String",
+      "description": "",
+      "defaultValue": "5"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="redisConfig" class="com.kiisoo.tp.common.redis3.conf.RedisConfiguration">
+        <property name="model" value="${redis.model}"></property>
+        <property name="hostAndPort" value="${redis.hostAndPort}"></property>
+        <property name="pass" value="${redis.pass}"></property>
+        <property name="timeOut" value="${redis.timeout}"></property>
+        <property name="maxRedirections" value="${redis.max_redirections}"></property>
+        <property name="maxIdle" value="${redis.maxIdle}"></property>
+        <property name="maxTotal" value="${redis.total}"></property>
+        <property name="maxWaitMillis" value="${redis.maxWaitMillis}"></property>
+    </bean>
+
+    <bean class="com.kiisoo.tp.common.redis3.BaseRedis" init-method="start" destroy-method="destroy">
+        <constructor-arg index="0" ref="redisConfig"/>
+    </bean>
+
+</beans>
